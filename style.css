@@ -1,0 +1,1639 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cover {
+    height: 105vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom,
+            rgb(0, 42, 94, 0) 0%,
+            rgb(0, 42, 94, 0) 50%,
+            rgb(0, 42, 94, 0.9) 70%,
+            rgb(0, 42, 94, 0.9) 90%),
+        url('asets/foto-utama.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.isi-cover {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+}
+
+.cover-title {
+    font-family: 'Plus Jakarta Sans';
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.nama-pasangan {
+    font-family: 'Poppins';
+    color: white;
+    font-size: 45px;
+}
+
+.kepada {
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-open {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 12px 14px;
+    background-color: #DFE9F5;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn-open:hover {
+    transform: translateY(-2px);
+}
+
+#cover {
+    position: fixed;
+    inset: 0;
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 1s ease;
+    opacity: 1s ease;
+    z-index: 9999;
+    transition: 1s;
+}
+
+#cover.hide {
+    transform: translateY(-100);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media (max-width: 768px) {
+    #cover {
+        padding: 30px 20px;
+        /* gap: 10px; */
+    }
+
+    .isi-cover {
+        gap: 5px;
+    }
+
+    .isi-cover img {
+        width: 250px;
+    }
+
+    .cover-title {
+        font-size: 16px;
+    }
+
+    .nama-pasangan {
+        font-size: 38px;
+    }
+
+    .kepada {
+        font-size: 18px;
+        gap: 15px;
+    }
+
+    .btn-open {
+        font-size: 18px;
+        padding: 10px 22px;
+    }
+}
+
+#contentUtama {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s ease;
+}
+
+#contentUtama.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#home {
+    height: 105vh;
+    background: linear-gradient(rgba(28, 28, 28, 0.2), rgba(28, 28, 28, 0.6)), url(asets/galleri6.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.container-home {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 60px 20px;
+    gap: 10px;
+}
+
+.head-home {
+    font-size: 20px;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+}
+
+.nama-mempelai {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gabarito';
+    line-height: 1.0;
+    font-size: 60px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.tanggal-home {
+    font-size: 20px;
+    font-family: 'Poppins';
+}
+
+.desk-home {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+#kalimatRomantis {
+    background: linear-gradient(180deg,
+            #7FAFC2 0%,
+            #6B9BAD 35%,
+            #4C7184 70%,
+            #294B5F 100%);
+}
+
+.container-romantis {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 20px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.judul-page {
+    font-size: 18px;
+    color: white;
+    margin: 30px auto 0;
+}
+
+.hadist {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 16px;
+    color: white;
+
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.keterangan {
+    font-size: 18px;
+    color: white;
+}
+
+.element-tutup img {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-ajakan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pembuka-undangan {
+    padding: 20px;
+    font-size: 13px;
+    color: white;
+}
+
+.kalimat-ajakan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.foto-mempelai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mempelai-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+
+}
+
+.foto {
+    width: 300px;
+    aspect-ratio: 3 /4;
+    border: 6px solid #E8DFD8;
+    border-radius: 50% / 35%;
+    overflow: hidden;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.identitas-pasangan {
+    background: #E8DFD8;
+    padding: 10px;
+    border-radius: 10px;
+    /* width: fit-content; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.span {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    gap: 0px;
+}
+
+.span img {
+    position: relative;
+    width: 100%;
+    max-width: 150px;
+}
+
+.span span {
+    margin-bottom: -30px;
+    z-index: 2;
+    color: #E8DFD8;
+}
+
+.identitas-pasangan h2 {
+    font-size: 18px;
+    color: #294B5F;
+}
+
+@media (max-width: 768px) {
+    .foto-mempelai {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+#jadwal-acara {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+}
+
+#jadwal-acara h2 {
+    font-size: 60px;
+    color: #4C7184;
+    text-align: center;
+    padding: 30px;
+}
+
+.container-time {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    width: clamp(70px, 20vw, 100px);
+    aspect-ratio: 1/1.2;
+    background-color: #4C7184;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Forum';
+    border-radius: 15px;
+}
+
+.time-box span {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.time-box p {
+    margin: 0px;
+    font-size: 18px;
+}
+
+.container-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.btn-calender {
+    margin-top: 20px;
+    gap: 10px;
+    font-size: 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: white;
+    padding: 20px 20px;
+    background-color: #4C7184;
+}
+
+/* info akad-nikah */
+.informasi-acara {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+.card-akad {
+    border-radius:
+        250px 250px 0 0 / 200px 200px 0 0;
+    background-image: url('asets/latar-biru.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #E8DFD8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Forum';
+    font-weight: normal;
+    padding: 50px;
+}
+
+.judul-acara h3 {
+    font-size: 50px;
+    color: #F5EFE6;
+}
+
+.judul-acara span {
+    display: block;
+    font-family: 'Zeyada';
+    font-size: 40px;
+    color: #F2E3D5;
+    margin-top: -20px;
+    left: 70%;
+    transform: translateX(30%);
+}
+
+.card-akad img {
+    width: 100%;
+    max-width: 100px;
+}
+
+.informasi-akad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.informasi-hari {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+}
+
+.informasi-tanggal {
+    font-size: 40px;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+}
+
+.informasi-bulan {
+    font-size: 35px;
+}
+
+.informasi-alamat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.container-maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-maps {
+    margin-top: 20px;
+    gap: 10px;
+    font-size: 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: #4C7184;
+    padding: 20px 20px;
+    background-color: #F5EFE6;
+}
+
+.card-resepsi {
+    border-radius:
+        0 0 200px 200px / 0 0 120px 120px;
+    background-image: url('asets/latar-biru.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #E8DFD8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Forum';
+    font-weight: normal;
+    padding: 50px;
+}
+
+.card-resepsi img {
+    width: 100%;
+    max-width: 100px;
+}
+
+.informasi-resepsi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.label-pemisah {
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .container-time {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .time-box {
+        width: 65px;
+        height: 80px;
+    }
+
+    .time-box span {
+        font-size: 28px;
+    }
+
+    .time-box p {
+        font-size: 14px;
+    }
+
+    .informasi-acara {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .card-akad,
+    .card-resepsi {
+        width: 100%;
+        max-width: 350px;
+        padding: 60px 20px;
+    }
+
+    .judul-acara h3 {
+        font-size: 36px;
+    }
+
+    .judul-acara span {
+        font-size: 30px;
+        transform: none;
+        left: auto;
+        margin-top: -17px;
+        left: 70%;
+        transform: translateX(32%);
+    }
+
+    .card-akad img,
+    .card-resepsi img {
+        max-width: 80px;
+    }
+
+    .informasi-hari {
+        font-size: 28px;
+        width: 90%;
+    }
+
+    .informasi-tanggal {
+        font-size: 36px;
+        width: 90%;
+    }
+
+    .informasi-bulan {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .informasi-alamat {
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .btn-maps {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    /* Radius tetap proporsional di HP */
+    .card-akad {
+        border-radius:
+            150px 150px 0 0 / 120px 120px 0 0;
+    }
+
+    .card-resepsi {
+        border-radius:
+            0 0 150px 150px / 0 0 100px 100px;
+    }
+
+    .label-pemisah {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+        margin-top: -70px;
+        margin-bottom: -60px;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .label-pemisah span {
+        display: block;
+        width: 100%;
+        background-color: #F5EFE6;
+        color: #294b5f;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 2px;
+        font-family: 'Plus Jakarta Sans';
+        font-size: 15px;
+
+        box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
+    }
+}
+
+
+
+#gallery {
+    background: linear-gradient(rgba(41, 75, 95, 0.4),
+            rgba(41, 75, 95, 0.8)),
+        url('asets/latar-biru.png');
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: content;
+    gap: 10px;
+}
+
+.judul-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.judul-gallery h3 {
+    margin: 0;
+    font-size: 80px;
+    font-family: 'Forum';
+    color: #F5EFE6;
+    font-weight: normal;
+}
+
+
+.judul-gallery::before {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #F5EFE6;
+}
+
+.judul-gallery::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #F5EFE6;
+}
+
+.gallery-container {
+    background-color: #F5EFE6;
+    border: 5px solid #F5EFE6;
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.mainImage {
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    border-radius: 10px;
+    width: calc(33.33% - 7px);
+    height: 120px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.thumbnail-active {
+    opacity: 1;
+}
+
+
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+#prev {
+    left: 8px;
+}
+
+#next {
+    right: 8px;
+}
+
+.quote {
+    font-size: 25px;
+    gap: 10px;
+    color: white;
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    #gallery {
+        padding: 60px 15px;
+    }
+
+    .judul-gallery {
+        gap: 8px;
+    }
+
+    .judul-gallery h3 {
+        font-size: 45px;
+    }
+
+    .judul-gallery::before,
+    .judul-gallery::after {
+        height: 1px;
+    }
+
+    .gallery-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 4px;
+        border-width: 3px;
+    }
+
+    .thumbnail-container {
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    .thumbnail {
+        width: calc(33.33% - 4px);
+    }
+
+    #prev,
+    #next {
+        font-size: 30px;
+    }
+
+    .quote {
+        font-size: 18px;
+        line-height: 1.8;
+        padding: 0 10px;
+    }
+
+}
+
+/* LOVE STORY */
+#story {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+    background: linear-gradient(rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.8));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.foto-story {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    margin: 0 auto;
+
+}
+
+.foto-1,
+.foto-2 {
+    position: absolute;
+    width: 56%;
+    aspect-ratio: 3/4;
+
+    border: 6px solid #294b5f;
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.foto-1 img,
+.foto-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Foto belakang */
+.foto-1 {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Foto depan */
+.foto-2 {
+    right: 0;
+    top: 140px;
+    z-index: 3;
+}
+
+.pembuka-cerita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pembuka-cerita h3 {
+    font-size: 80px;
+    font-family: 'Forum';
+    color: #294b5f;
+    font-weight: normal;
+    margin: 0;
+}
+
+.pembuka-cerita span {
+    display: block;
+    font-family: 'Zeyada';
+    font-size: 80px;
+    color: #7FAFC2;
+    margin-top: -50px;
+    left: 40%;
+    transform: translateX(40%);
+}
+
+.story-mempelai {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cerita-ringkas {
+    background-color: #F5EFE6;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+
+}
+
+.cerita-ringkas h3 {
+    font-size: 25px;
+    font-family: 'Forum';
+    color: #294B5F;
+}
+
+.cerita-ringkas p {
+    font-size: 20px;
+    font-family: 'montserrat';
+    color: rgb(41, 75, 95);
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    #story {
+        padding: 50px 20px;
+        gap: 40px;
+    }
+
+    .foto-story {
+        max-width: 300px;
+        height: 320px;
+    }
+
+    .foto-1,
+    .foto-2 {
+        width: 58%;
+        border-width: 4px;
+        border-radius: 20px;
+    }
+
+    .foto-2 {
+        top: 120px;
+    }
+
+    .pembuka-cerita h3 {
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .pembuka-cerita span {
+        font-size: 50px;
+        margin-top: -30px;
+        transform: translateX(40%);
+    }
+
+    .story-mempelai {
+        gap: 15px;
+        /* text-align: center; */
+    }
+
+    .cerita-ringkas h3 {
+        font-size: 22px;
+    }
+
+    .cerita-ringkas p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+}
+
+#rsvp-ucapan {
+    background: white;
+    min-height: 60vh;
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+}
+
+.judul-rsvp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.judul-rsvp h3 {
+    font-size: 40px;
+    color: #294B5F;
+    font-family: 'forum';
+}
+
+.judul-rsvp p {
+    font-size: 22px;
+    font-family: 'Poppins';
+    color: #294B5F;
+    font-style: bold;
+}
+
+.judul-rsvp span {
+    display: block;
+    font-family: 'Zeyada';
+    font-size: 30px;
+    color: black;
+    margin-top: -16px;
+    left: 40%;
+    transform: translateX(50%);
+}
+
+.stats-card {
+    width: 100%;
+    max-width: 700px;
+    background: #294B5F;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    color: white;
+}
+
+.container-rsvp {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.rsvp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.submit {
+    align-items: flex-start;
+}
+
+.form-rsvp {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.form-rsvp input,
+.form-rsvp textarea,
+.form-rsvp select {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    gap: 10px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.form-rsvp textarea {
+    resize: none;
+}
+
+.form-rsvp button {
+    width: 140px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* responsive mobile */
+@media (max-width: 768px) {
+
+    #rsvp-ucapan {
+        padding: 30px 15px;
+    }
+
+    .judul-rsvp h3 {
+        font-size: 32px;
+        margin: 0;
+    }
+
+    .judul-rsvp p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .judul-rsvp span {
+        font-size: 24px;
+        transform: translateX(30%);
+    }
+
+    .stats-card {
+        padding: 15px;
+    }
+
+    .container-rsvp {
+        gap: 10px;
+    }
+
+    .rsvp {
+        flex: 1;
+        min-width: 80px;
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+
+    .rsvp h3 {
+        font-size: 24px;
+    }
+
+    .form-rsvp input,
+    .form-rsvp textarea,
+    .form-rsvp select {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .form-rsvp button {
+        width: 120px;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+}
+
+
+#gift {
+    background: linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(6, 6, 6, 0.5)),
+        url('asets/latar-biru.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 50px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont-gift {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+.container-gift {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.container-gift h3 {
+    font-size: 40px;
+    font-family: 'Forum';
+    color: white;
+}
+
+.container-gift span {
+    display: block;
+    font-family: 'Zeyada';
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: -18px;
+    left: 40%;
+    transform: translateX(40%);
+}
+
+.container-gift p {
+    font-family: 'Montserrat';
+    color: white;
+}
+
+.gift-content {
+    display: none;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gift-content.show {
+    display: flex;
+}
+
+.btn-gift {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    background: #F5EFE6;
+    color: #294B5F;
+    cursor: pointer;
+}
+
+.bank-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 25px;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    color: white;
+    /* background:white; */
+}
+
+.bank-card button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #636a4f;
+    color: white;
+    cursor: pointer;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+
+    #gift {
+        padding: 30px 15px;
+        min-height: auto;
+    }
+
+    .cont-gift {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .container-gift h3 {
+        font-size: 32px;
+    }
+
+    .container-gift span {
+        font-size: 24px;
+        margin-top: -10px;
+        transform: translateX(25%);
+    }
+
+    .container-gift p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .btn-gift {
+        width: 100%;
+        max-width: 200px;
+        font-size: 16px;
+        padding: 14px 20px;
+    }
+
+    .gift-content {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+    }
+
+    .gift-content.show {
+        display: flex;
+    }
+
+    .bank-card {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bank-card h3 {
+        font-size: 24px;
+    }
+
+    .bank-card h4 {
+        font-size: 22px;
+        word-break: break-all;
+    }
+
+    .bank-card p {
+        font-size: 15px;
+    }
+
+    .bank-card button {
+        width: 100%;
+        max-width: 140px;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+}
+
+
+
+#penutup-content {
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 10%,
+            rgba(255, 255, 255, 0.1) 30%,
+            rgba(255, 255, 255, 0.7) 40%,
+            rgba(255, 255, 255, 1) 100%),
+        url('asets/foto-utama.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-tutup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.kalimat-penutup {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.kalimat-penutup h3 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: #294B5F;
+    font-family: 'Forum';
+}
+
+.kalimat-penutup h5 {
+    font-size: 50px;
+    font-family: 'zeyada';
+    color: #294B5F;
+}
+
+.kalimat-penutup p {
+    font-size: 15px;
+    font-family: 'Poppins';
+}
+
+.design {
+    display: flex;
+    flex-direction: column;
+}
+
+.design p {
+    font-size: 15px;
+    font-family: 'Poppins';
+}
+
+.info-pesan {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 25px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.whatsapp a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #294B5F;
+    /* background-color: black;
+    padding: 5px;
+    border-radius: 25px; */
+}
+
+.instagram {
+    font-size: 25px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    #penutup-content {
+        padding: 30px 20px;
+        min-height: 100vh;
+    }
+
+    .container-tutup {
+        gap: 35px;
+    }
+
+    .kalimat-penutup h3 {
+        font-size: 28px;
+    }
+
+    .kalimat-penutup h5 {
+        font-size: 40px;
+    }
+
+    .kalimat-penutup p {
+        font-size: 14px;
+        line-height: 1.8;
+        padding: 0 10px;
+    }
+
+    .design p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .info-pesan {
+        gap: 20px;
+    }
+
+    .whatsapp a,
+    .instagram {
+        font-size: 22px;
+    }
+
+}
+
+/* animasi element bunga */
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1.5s ease;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease;
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease;
+}
+
+.fade-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 1s ease;
+}
+
+.zoom-in.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* tombol musik */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    /* background: rgb(99, 106, 79); */
+    background: rgba(99, 106, 79, 0.5);
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#floatingWish {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
+
+#floatingWish.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wish-card {
+    background: rgba(99, 106, 79, .30);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    font-family: 'Poppins';
+    transform: translateY(30px);
+    opacity: 0;
+    transition:
+        transform .6s ease,
+        opacity .6s ease;
+}
+
+#wishWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.wish-card.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.wish-card.hide {
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+.wish-message {
+    margin: 0;
+    font-size: 14px;
+}
+
+.wish-sender {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+
+    #floatingWish {
+        width: 200px;
+        left: 10px;
+        bottom: 10px;
+        gap: 6px;
+    }
+
+    .wish-card {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .wish-message {
+        font-size: 10px;
+        line-height: 1.35;
+    }
+
+    .wish-sender {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+}
